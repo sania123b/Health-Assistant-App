@@ -1,0 +1,212 @@
+/* App.css */
+
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Main app container */
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Welcome message */
+.welcome-message {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  animation: fadeOut 3s forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-30%);
+  }
+}
+
+/* Initial page with background color */
+.initial-page {
+  background: linear-gradient(135deg, #34a1eb, #4CAF50);
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  background-color: #ffffff;
+  color: #4CAF50;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+  background-color: #4CAF50;
+  color: white;
+  transform: translateY(-3px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+/* Form container styling */
+.form-container {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+  text-align: center;
+}
+
+.form-container h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.submit-btn:hover {
+  background-color: #45a049;
+  transform: translateY(-3px);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* Homepage styling */
+/* Homepage background */
+.home-page {
+  background: linear-gradient(135deg, #a8e6a1, #4CAF50); /* soft yellow-orange gradient */
+  min-height: 100vh;
+  padding: 60px 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Welcome section */
+.home-page h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.color-line {
+  width: 100px;
+  height: 4px;
+  background-color: #4CAF50;
+  border-radius: 2px;
+  margin-bottom: 40px;
+}
+
+/* Options grid */
+.options-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* Each option card */
+.option-card {
+  background-color: #4CAF50;
+  color: white;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+  min-height: 280px; /* increased height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.option-card:hover {
+  transform: translateY(-6px);
+  background-color: #45a049;
+}
+
+.option-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+.option-card p {
+  font-size: 1rem;
+  color: #f0f0f0;
+  padding: 0 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .options-container {
+    grid-template-columns: 1fr;
+  }
+}
